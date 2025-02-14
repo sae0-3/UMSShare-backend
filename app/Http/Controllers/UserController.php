@@ -9,6 +9,6 @@ class UserController extends Controller
 {
     public function getProfile(Request $request): JsonResponse
     {
-        return $request->user();
+        return response()->json($request->user());
     }
 }
