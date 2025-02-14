@@ -13,22 +13,21 @@ class User extends Authenticatable
     protected $fillable = [
         'name',
         'email',
-        'google_id',
         'avatar',
-        'google_token',
-        'google_refresh_token',
         'role',
     ];
-
+    
     protected $dates = [
         'created_at',
         'updated_at',
         'last_login',
     ];
-
+    
     protected $hidden = [
+        'google_id',
         'google_token',
         'google_refresh_token',
+        'google_drive_folder_id',
     ];
 
     public function getRoleAttribute($value)
